@@ -1,0 +1,287 @@
+:root {
+  --COLOR: rgb(158, 235, 154);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--COLOR);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 7%;
+  margin-bottom: 4%;
+}
+
+.image-container {
+  position: relative;
+  border-radius: 50% 50% 0 0;
+  margin-top: 3%;
+}
+
+.image-container img {
+  width: 1400px;
+  height: 600px;
+}
+
+.content-container {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -12%);
+  background-color: rgba(189, 187, 187, 0.8);
+  color: black;
+  padding: 50px;
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 1.2em;
+  margin: 0;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+p {
+  font-style: italic;
+}
+
+/* menu */
+
+header {
+  margin: 20px auto;
+  background-color: black;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 99; /* ensure menu stays on top */
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  width: 800px; 
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  transition: top 0.3s ease-in-out;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  margin: 0 5px; 
+  float: left;
+  width: auto; 
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.menu li a {
+  padding: 10px 20px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out, font-size 0.5s ease-in-out,
+    padding 0.3s ease; 
+  padding: 10px 20px; 
+}
+
+.menu ul li a:hover {
+  background-color: var(--COLOR);
+  font-size: 20px;
+  color: black;
+  padding: 15px 25px; 
+}
+
+.menu.active {
+  top: -60px;
+}
+
+/* for login/signup button */
+
+.menu li.login-signup {
+  position: absolute; 
+  right: -44%;
+  top: 70%;
+  transform: translateY(-50%);
+}
+
+.menu li.login-signup button {
+  background-color: var(--COLOR);
+  color: black;
+  border: 1px solid --COLOR;
+  padding: 5px 10px;
+  cursor: pointer; 
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  font-size: 14px; 
+}
+
+.menu li.login-signup button:hover {
+  background-color: black;
+  border-color: var(--COLOR);
+  color: var(--COLOR);
+}
+
+.login,
+.signup {
+  background-color: black;
+  color: black;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/*For featured genere*/
+
+.featured-section {
+  background-color: #dbf361b7;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-style: italic;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: large;
+}
+
+.featured-books {
+  display: flex;
+  justify-content: space-evenly; /* Distribute items evenly */
+  flex-wrap: wrap; 
+}
+
+.book-item {
+  width: 25%;
+  margin: 10px;
+  text-align: center;
+  border: 1px solid white;
+  padding: 10px; 
+  background-color: white;
+  border-radius: 6%;
+}
+
+.book-item img {
+  width: 100%; /* Images span the full width of the book item */
+  margin-bottom: 10px;
+  border-radius: 6%;
+}
+
+.book-item h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.book-item p {
+  font-size: medium;
+  font-weight: bold;
+}
+
+/* review */
+
+.review-item {
+  position: relative;
+  display: inline-block;
+  width: 25%; 
+  margin: 10px;
+  text-align: center;
+  border: 1px solid white;
+  padding: 10px; 
+  background-color: white;
+  border-radius: 6%;
+}
+
+.review-item img {
+  width: 100%;
+  margin-bottom: 12px;
+  border-radius: 6%;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  left: 9px;
+  color: black;
+  font-size: 16px;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  nav li {
+    margin: 5px 0;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  nav ul {
+    flex-direction: row;
+  }
+  nav li {
+    margin: 0 10px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  nav ul {
+    flex-direction: row;
+  }
+  nav li {
+    margin: 0 20px;
+  }
+}

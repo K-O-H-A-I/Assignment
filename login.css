@@ -1,0 +1,56 @@
+#loginPopup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Ensure the pop-up appears above other content */
+  background-color: rgba(180, 212, 172, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  height: 480px;
+}
+
+#loginPopup h2 {
+  text-align: center;
+}
+
+#loginPopup .login-container {
+  padding: 20px;
+}
+
+#loginPopup .form-group {
+  margin-bottom: 15px;
+}
+
+#loginPopup label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#loginPopup input[type="text"],
+#loginPopup input[type="password"],
+#loginPopup input[type="email"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+#loginPopup button {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#loginPopup button:hover {
+  background-color: black;
+  color: #4caf50;
+  font-weight: bold;
+}
