@@ -198,7 +198,7 @@ p {
 
 .featured-books {
   display: flex;
-  justify-content: space-evenly; /* Distribute items evenly */
+  justify-content: space-evenly;
   flex-wrap: wrap; 
 }
 
@@ -213,7 +213,7 @@ p {
 }
 
 .book-item img {
-  width: 100%; /* Images span the full width of the book item */
+  width: 100%; 
   margin-bottom: 10px;
   border-radius: 6%;
 }

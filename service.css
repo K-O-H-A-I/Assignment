@@ -25,6 +25,7 @@ h2 {
 }
 
 .book-item {
+  position: relative; 
   width: 250px;
   margin: 20px;
   padding: 20px;
@@ -32,35 +33,26 @@ h2 {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .book-item img {
-  width: 80%;
+  width: 100%;
   border-radius: 6px;
-  margin-bottom: 10px;
+  transition: opacity 0.3s ease; 
 }
 
-.book-item h3 {
-  font-size: 1.2em;
-  margin-bottom: 10px;
+.book-item:hover .buy-button {
+  display: block; 
 }
 
-.book-item p {
-  font-size: 18px;
-  margin-right: 0px;
-  margin-bottom: 5px;
-}
+/* Buy button */
 
-/* Buy Button */
 .buy-button {
-  display: block;
+  display: none; /* Initially hidden */
   position: absolute;
-  bottom: -5px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   background-color: black;
   color: white;
   font-weight: bold;
@@ -73,37 +65,35 @@ h2 {
 }
 
 .buy-button:hover {
-  color: black;
+  color: rgba(0, 0, 0, 1);
   background-color: white;
 }
 
 /* wishlist */
 .book-item {
-  /* Existing styles for the book item container... */
-  position: relative; /* Make the book item container relative for absolute positioning */
+  position: relative; 
 }
 
 .book-image {
-  /* Existing styles for the book image... */
-  width: 100%; /* Ensure the image fills the container width */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%; 
+  height: auto; 
 }
 
 .heart-button {
-  position: absolute; /* Make the button absolutely positioned */
-  bottom: 10px; /* Position 10px from the bottom */
-  right: 10px; /* Position 10px from the right */
-  width: 50px; /* Set button width */
-  height: 50px; /* Set button height */
-  border-radius: 50%; /* Make the button circular */
-  background-color: transparent; /* Remove default button background */
-  border: none; /* Remove default button border */
-  cursor: pointer; /* Indicate clickable behavior */
+  position: absolute; 
+  bottom: 10px; 
+  right: 10px; 
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%; 
+  background-color: transparent; 
+  border: none; 
+  cursor: pointer; 
 }
 
 .heart-button img {
-  width: 100%; /* Stretch image to fill the button */
-  height: 100%; /* Stretch image to fill the button */
+  width: 100%; 
+  height: 100%; 
 }
 
 /* top section */
