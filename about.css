@@ -8,10 +8,10 @@ body {
   max-width: 800px;
   margin: 130px auto;
   background-color: rgba(243, 243, 243, 0);
+  backdrop-filter: blur(10px);
   padding: 20px;
   border-radius: 10px;
   position: relative;
-  backdrop-filter: blur(10px);
 }
 
 h1 {
@@ -82,18 +82,12 @@ button:hover {
 
 header {
   margin: 20px auto;
-  background-color: black;
-  height: 80px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  background-color: transparent;
+  height: 10px;
   width: 100%;
-  z-index: 99; /* ensure menu stays on top */
 }
 
 .menu {
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -130,6 +124,7 @@ header {
 }
 
 .menu ul li a {
+  font-weight: bolder;
   text-decoration: none;
   color: white;
   display: block;
@@ -140,9 +135,10 @@ header {
 }
 
 .menu ul li a:hover {
-  background-color: rgb(158, 235, 154);
+  background-color: transparent;
+  text-decoration: underline;
   font-size: 20px;
-  color: black;
+  color: rgb(158, 235, 154);
   padding: 15px 25px;
 }
 

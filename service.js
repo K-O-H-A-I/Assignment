@@ -130,23 +130,57 @@ const books = [
 // Function to create book items and append them
 function renderBooks() {
   const catalog = document.getElementById("book-catalog");
+  catalog.innerHTML = ""; // Clear existing content to avoid duplicates
 
-  books.forEach((book) => {
+  books.forEach((book, index) => {
     const bookItem = document.createElement("div");
     bookItem.classList.add("book-item");
 
-    bookItem.innerHTML = `
-            <img src="${book.image}" alt="${book.title}" class="book-image">
-            <button class="buy-button">Buy</button>
-            <button class="heart-button">
-                <img src="heart.jpg" alt="Add to Wishlist">
+    // Unique IDs for button and wishlist
+    const buyButtonId = `buy-button-${index}-${book.title.replace(/\s/g, "-")}`;
+    const heartButtonId = `heart-button-${index}-${book.title.replace(
+      /\s/g,
+      "-"
+    )}`;
+
+    const bookContent = `
+            <img src = "${book.image}" alt = "${book.title}" class = "book-image">
+            <button id = "${buyButtonId}" class = "buy-button" onclick = "showPopup('${book.title}','${book.author}','${book.price}')">Buy</button>
+            <button id = "${heartButtonId}" class = "heart-button">
+                <img src = "heart.jpg" alt = "Add to Wishlist">
             </button>
             <h3>${book.title}</h3>
             <p>Author: ${book.author}</p>
             <p>Price: ${book.price}</p>
         `;
 
+    bookItem.innerHTML = bookContent;
     catalog.appendChild(bookItem);
+  });
+}
+
+function showPopup(bookTitle, bookAuthor, bookPrice) {
+  const popupContent = `
+    <p>Do you want to buy this book ${bookTitle}?</p>
+    <p>From ${bookAuthor}</p>
+    <p>At ${bookPrice}</p>
+    <button class = "confirm-button">Confirm</button>
+    <button class = "cancel-button">Cancel</button>
+  `;
+
+  const popup = document.getElementById("popup");
+  const popupContentElement = document.getElementById("popup-content");
+  popupContentElement.innerHTML = popupContent;
+
+  popup.style.display = "block";
+
+  document.querySelector(".confirm-button").addEventListener("click", () => {
+    alert(`The book ${bookTitle} successfully bought!`);
+    popup.style.display = "none";
+  });
+
+  document.querySelector(".cancel-button").addEventListener("click", () => {
+    popup.style.display = "none";
   });
 }
 

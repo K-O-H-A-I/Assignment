@@ -2,10 +2,16 @@ body {
   background-color: rgb(158, 235, 154);
 }
 
+#service-background {
+  background-image: url(login.jpg);
+  filter: brightness(0.7);
+}
+
 .service-section {
   padding: 50px 0;
   text-align: center;
   margin-top: 2%;
+  background-image: url(login.jpg);
 }
 
 .container {
@@ -16,6 +22,7 @@ body {
 h2 {
   font-size: 2em;
   margin-bottom: 20px;
+  color: white;
 }
 
 .book-catalog {
@@ -25,7 +32,7 @@ h2 {
 }
 
 .book-item {
-  position: relative; 
+  position: relative;
   width: 250px;
   margin: 20px;
   padding: 20px;
@@ -38,11 +45,11 @@ h2 {
 .book-item img {
   width: 100%;
   border-radius: 6px;
-  transition: opacity 0.3s ease; 
+  transition: opacity 0.3s ease;
 }
 
 .book-item:hover .buy-button {
-  display: block; 
+  display: block;
 }
 
 /* Buy button */
@@ -69,31 +76,77 @@ h2 {
   background-color: white;
 }
 
+/* popup */
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.confirm-button,
+.cancel-button {
+  margin-top: 10px;
+  width: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirm-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.cancel-button {
+  background-color: #f44336;
+  color: white;
+}
+
 /* wishlist */
 .book-item {
-  position: relative; 
+  position: relative;
 }
 
 .book-image {
-  width: 100%; 
-  height: auto; 
+  width: 100%;
+  height: auto;
 }
 
 .heart-button {
-  position: absolute; 
-  bottom: 10px; 
-  right: 10px; 
-  width: 50px; 
-  height: 50px; 
-  border-radius: 50%; 
-  background-color: transparent; 
-  border: none; 
-  cursor: pointer; 
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .heart-button img {
-  width: 100%; 
-  height: 100%; 
+  width: 100%;
+  height: 100%;
 }
 
 /* top section */
@@ -101,7 +154,8 @@ h2 {
 .top-section {
   padding: 50px 0;
   margin-top: 10%;
-  background-color: #dbf361b7;
+  background-color: rgba(243, 243, 243, 0.3);
+  backdrop-filter: blur(10px);
   overflow: hidden;
   border-radius: 20px;
   display: flex;
@@ -117,6 +171,8 @@ h2 {
 }
 
 .top-section h2 {
+  color: black;
+  font-weight: bolder;
   font-size: 24px;
   margin-bottom: 10px;
   margin-right: 26%;
@@ -124,7 +180,8 @@ h2 {
 
 .top-section p {
   margin-bottom: 20px;
-  font-weight: bold;
+  font-size: 24px;
+  font-weight: bolder;
   font-size: large;
   margin-right: 56%;
 }

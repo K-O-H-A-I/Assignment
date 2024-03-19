@@ -1,20 +1,3 @@
-// Menu scroll animation
-let prevScrollPos = window.scrollY; // Initial scroll position
-
-window.addEventListener("scroll", function () {
-  let currentScrollPos = window.scrollY;
-
-  if (prevScrollPos > currentScrollPos) {
-    document.querySelector("header").style.top = "0";
-    document.querySelector(".menu").style.top = "0";
-  } else {
-    document.querySelector("header").style.top = "-80px";
-    document.querySelector(".menu").style.top = "-80px";
-  }
-
-  prevScrollPos = currentScrollPos;
-});
-
 // Validate the form 
 document
   .getElementById("contact-form")
