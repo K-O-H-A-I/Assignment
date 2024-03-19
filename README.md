@@ -4,6 +4,7 @@ Readers Retreat is a business website crafted with HTML, CSS, and JavaScript, de
 Our platform is designed to ignite your passion for reading and introduce you to new literary wonders.
 
 Features at a Glance 
+
 Home Page: Containg information about featured books and review. 
 
 About Page: Learn about the vision and values that drive Readers Retreat forward.
