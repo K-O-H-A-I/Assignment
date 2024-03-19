@@ -4,7 +4,7 @@ body {
 
 #service-background {
   background-image: url(login.jpg);
-  filter: brightness(0.7);
+  filter: brightness(0.8);
 }
 
 .service-section {
