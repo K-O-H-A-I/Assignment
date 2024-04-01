@@ -77,7 +77,7 @@ document
       // Check if email is valid
       alert("Please enter a valid email address.");
     } else {
-      window.location.href = "home.html";
+      window.location.href = "index.html";
     }
   });
 
@@ -113,7 +113,7 @@ document
       // Check if email is valid
       alert("Please enter a valid email address.");
     } else {
-      window.location.href = "home.html";
+      window.location.href = "index.html";
     }
   });
 

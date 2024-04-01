@@ -211,18 +211,18 @@ const currentMonth = new Date()
 
 // Arrays to store image filenames for each month
 const imageFilenames = {
-  january: ["book1.png"],
-  february: ["book2.png"],
-  march: ["book3.jpg"],
-  april: ["book4.png"],
-  may: ["book5.png"],
-  june: ["book6.png"],
-  july: ["book9.png"],
-  august: ["book7.png"],
-  september: ["book8.png"],
-  october: ["book10.png"],
-  november: ["book11.png"],
-  december: ["book12.png"],
+  january: ["slideshow/book1.png"],
+  february: ["slideshow/book2.png"],
+  march: ["slideshow/book3.jpg"],
+  april: ["slideshow/book4.png"],
+  may: ["slideshow/book5.png"],
+  june: ["slideshow/book6.png"],
+  july: ["slideshow/book9.png"],
+  august: ["slideshow/book7.png"],
+  september: ["slideshow/book8.png"],
+  october: ["slideshow/book10.png"],
+  november: ["slideshow/book11.png"],
+  december: ["slideshow/book12.png"],
 };
 
 // Update the displayed month
