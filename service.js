@@ -246,8 +246,7 @@ function showSlides() {
     slideIndex = 1;
   }
   slides[slideIndex - 1].style.display = "block";
-  slides[slideIndex - 1].querySelector("img").src = `slideshow/${
+  slides[slideIndex - 1].querySelector("img").src = `${
     currentImages[slideIndex - 1]
   }`; // Update image source
-  setTimeout(showSlides, 6000);
 }
