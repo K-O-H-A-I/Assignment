@@ -28,8 +28,8 @@ app.get("/about", (req, res) => {
 const connection = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "QwErTy2468!#%&(",
-  database: "Readers_Retreat",
+  password: " ",
+  database: " ",
 });
 
 console.log("Connection:" + connection);
