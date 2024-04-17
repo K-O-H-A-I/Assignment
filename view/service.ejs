@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>service</title>
+    <link rel="stylesheet" type="text/css" href="css/service.css">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+</head>
+
+<body>
+
+    <header>
+        <nav class="menu">
+            <ul id="menu_ul">
+                <li id="menu_li"><a href="/index">Home</a></li>
+                <li id="menu_li"><a href="#">Services</a></li>
+                <li id="menu_li"><a href="/about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="top-section">
+        <div class="content">
+            <h2>Featured Book of the Month</h2>
+            <p id="currentMonth"></p>
+            <button>Shop Now</button>
+        </div>
+        <div id="slideshow-container" class="slideshow-container">
+            <div class="slidefade">
+                <img src="book1" style="width:100%">
+            </div>
+        </div>
+    </div>
+
+    <div id="service-background">
+        <div class="service-section">
+            <div class="container">
+                <h2>Catalog</h2>
+                <div id="book-catalog" class="book-catalog">
+                    <!-- Book items will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content" id="popup-content">
+            <!-- Popup content will be dynamically added here -->
+        </div>
+    </div>
+
+    <script src="js/service.js"></script>
+</body>
+
+</html>

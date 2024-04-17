@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reader's Retreat</title>
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/signup.css">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+</head>
+
+<body>
+
+    <!-- A header containg menu for the links of other pages -->
+    <header>
+        <nav class="menu">
+            <ul id="menu_ul">
+                <li id="menu_li"><a href="#">Home</a></li>
+                <li id="menu_li"><a href="/service">Services</a></li>
+                <li id="menu_li"><a href="/about">About</a></li>
+                <li id="menu_li" class="login-signup">
+                    <button class="login">Login</button>
+                    <button class="signup">Sign Up</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Login Popup -->
+    <div class="popup" id="loginPopup">
+        <h2>Login</h2>
+        <div class="login-container">
+            <form id="login-form" method="post" action="/loginSubmit">
+                <div class="form-group">
+                    <label for="login-username"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" id="login-username" name="username">
+                </div>
+                <div class="form-group">
+                    <label for="login-password"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" id="login-password" name="password">
+                </div>
+                <div class="form-group">
+                    <button id="login-submit" type="submit">Login</button>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="remember"> Remember me
+                    </label>
+                </div>
+                <div class="form-group">
+                    <button type="button" id="login-cancelbtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+
+    <!-- Signup Popup -->
+    <div class="popup" id="signupPopup">
+        <h2>Sign Up</h2>
+        <div class="signup-container">
+            <form id="signup-form" method="post" action="/signSubmit">
+                <div class="signup-group">
+                    <label for="signup-email"><b>Email</b></label>
+                    <input type="email" placeholder="Enter email" id="signup-email" name="email">
+                </div>
+                <br>
+                <div class="signup-group">
+                    <label for="signup-username"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" id="signup-username" name="username">
+                </div>
+                <br>
+                <div class="signup-group">
+                    <label for="signup-password"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" id="signup-password" name="password">
+                </div>
+                <br><br>
+                <div class="signup-group">
+                    <button type="submit" id="signup-submit">Sign Up</button>
+                </div>
+                <br><br>
+                <div class="signup-group">
+                    <button type="button" id="signup-cancelbtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+
+    <!-- A container containing the name of the store -->
+    <div class="container">
+        <div class="image-container">
+            <img src="background.png" alt="Image description">
+        </div>
+        <div class="content-container">
+            <h1>Reader's Retreat</h1>
+            <p>"Discover The World of Words"</p>
+        </div>
+    </div>
+
+    <!-- A container showing the featured collection of books -->
+    <div class="featured-section">
+        <div class="featured-container">
+            <h2>Featured Collections</h2>
+            <p>Explore a curated selection of our most popular books.</p>
+            <div class="featured-books">
+                <div class="book-item">
+                    <img src="book1.png" alt="Book 1">
+                    <h3>Fiction Book</h3>
+                    <p>Discover a world of endless possibilities and immersive storytelling with our collection of
+                        fictional books. Dive into
+                        captivating narratives crafted by imaginative minds that transport you to new realms, evoke deep
+                        emotions, and challenge
+                        your perceptions.</p>
+                </div>
+                <div class="book-item">
+                    <img src="book2png.png" alt="Book 2">
+                    <h3>Non Fiction Book</h3>
+                    <p>Embark on a journey of knowledge and discovery with our collection of non-fictional books. Delve
+                        into real-world topics,
+                        insightful perspectives, and profound experiences that enrich your understanding of the world
+                        around you.</p>
+                </div>
+                <div class="book-item">
+                    <img src="book3.png" alt="Book 3">
+                    <h3>Classics</h3>
+                    <p>Delve into the timeless allure of classic literature, where stories resonate across generations,
+                        offering profound
+                        insights into human experience, cultural heritage, and universal truths. Explore the depths of
+                        literary masterpieces and
+                        embark on a journey through the rich tapestry of human imagination and wisdom.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- a container showing customer review -->
+    <div class="review">
+        <div class="review-container">
+            <h2>What People Say About Us</h2>
+            <div class="featured-books">
+                <div class="review-item">
+                    <img src="review.png" alt="review1">
+                    <p class="content">"Readers Retreat is an absolute gem for book lovers! Their diverse collection
+                        caters to every
+                        literary taste, from
+                        timeless classics to contemporary bestsellers. The cozy ambiance and knowledgeable staff make
+                        browsing a delight, and
+                        their commitment to promoting reading culture is commendable."</p>
+                </div>
+                <div class="review-item">
+                    <img src="review.png" alt="review1">
+                    <p class="content">"As an avid reader, I can't recommend Readers Retreat enough! The tranquil
+                        atmosphere and carefully curated selection of
+                        books create the perfect haven for bookworms. Whether you're seeking a gripping thriller or a
+                        thought-provoking literary
+                        masterpiece, you're sure to find your next great read here."</p>
+                </div>
+                <div class="review-item">
+                    <img src="review.png" alt="review1">
+                    <p class="content">"Readers Retreat exceeded my expectations with its extensive range of titles and
+                        welcoming atmosphere. The staff's
+                        passion for literature shines through, as they offer personalized recommendations and foster a
+                        sense of community among
+                        readers. It's more than just a bookstore; it's a sanctuary for book enthusiasts."</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/home.js"></script>
+</body>
+
+</html>
