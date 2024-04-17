@@ -24,6 +24,9 @@ app.get("/service", (req, res) => {
 app.get("/about", (req, res) => {
   res.render("about");
 });
+app.get("/profile", (req, res) => {
+  res.render("profile");
+});
 
 const connection = mysql.createConnection({
   host: "localhost",
@@ -98,7 +101,6 @@ app.post("/loginSubmit", (req, res) => {
     res.redirect("/index");
   }
 });
-
 
 //funxtion to validate login and signup forms
 function validate_input_signup(email, name, password) {
